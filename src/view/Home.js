@@ -1,76 +1,15 @@
 // Importing Libraries
 // Importing Libraries
 import React, { Fragment } from "react";
-
-import icon1 from '../assets/img/sol.png';
-import icon2 from '../assets/img/cal.png';
-import close_m from '../assets/img/close.svg';
-
-import HomeBitacora from "../components/home/Home-Bitacora.jsx";
-import HomeReportes from "../components/home/Home-Reportes.jsx";
-import HomeDashboard from "../components/home/Home-Dashboard.jsx";
-import HomeOrdenCompra from "../components/home/Home-OrdenCompra.jsx";
-import HomeOrdenVenta from "../components/home/Home-OrdenVenta.jsx";
-import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
-import Modal from 'react-modal'
-import swal from 'sweetalert';
-
+import Footer from "../components/Footer.jsx";
 // Component
 const Home = (props) => {
-    var subtitle;
-    var subtitle2;
-    const [modalIsOpen,setIsOpen] = React.useState(false);
-    const [modalIsOpen2,setIsOpen2] = React.useState(false);
 
-    function openModal() {
-        setIsOpen(true);
-    }
-    
-      function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
-      }
-    
-      function closeModal(){
-        setIsOpen(false);
-      }
-
-      function openModal2() {
-        setIsOpen2(true);
-      }
-    
-      function afterOpenModal2() {
-        // references are now sync'd and can be accessed.
-        subtitle2.style.color = '#f00';
-      }
-    
-      function closeModal2(){
-        setIsOpen2(false);
-      }
-
-      function alertModal_Succes(){
-        swal({
-            title: "Carga de archivo",
-            text: "Tu archivo se ha cargado exitosamente",
-            icon: "success",
-            button: "ACEPTAR",
-          });
-          {closeModal()}
-      }
-
-      function alertModal_Danger(){
-        swal({
-            title: "Carga de archivo",
-            text: "Hubo un error al cargar tu archivo",
-            icon: "error",
-            button: "ACEPTAR",
-          });
-       
-      }
+   
       var logOut = () => {
         localStorage.clear();
-        props.history.push("/chargebacks");
+        props.history.push("/quote");
         return
       };
 
@@ -98,208 +37,428 @@ const Home = (props) => {
         
     <div>
    
-    <Modal
-      isOpen={modalIsOpen}
-      onAfterOpen={afterOpenModal}
-      onRequestClose={closeModal}
-      
-      contentLabel="Example Modal"
-    >
-
-        <h3 ref={_subtitle => (subtitle = _subtitle)} className="forma t_center">CARGA DE ARCHIVO
-        </h3>
-        <button onClick={closeModal} className="close_mod">
-            <img src={close_m}/>
-        </button>
-      {/* Ingresar datos modal aqui */}
-
-      <form className="inputs_filter">
-            
-            <div className="d50 center mar_t_3">
-                <div className="forma mar_t_1">
-                    <input id="upload" type="file"/>
-                    <label for="upload" className="upload forma">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-                            <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
-                        </svg>
-                        <span> Carga tu archivo...</span>
-                    </label>
-                </div>
-                <div className="forma mar_t_2">
-                    <label className="forma">Fecha inicial</label>
-                    <input type="date" id="start" name="" min="2018-01-01" value="2018-07-22"/>
-                </div>
-
-                <div className="forma mar_t_2">
-                    <label className="forma">Terminal</label>
-                    <select className="select">
-                        <option>Visa / Master Card</option>
-                        <option>AMEX</option>
-                        <option>OXXO</option>
-                        <option>Paycash</option>
-                        <option>SPEI</option>
-                    </select>
-                </div>
-                <div className="forma">
-                    <input type="submit" className="bot_value mar_none_bot buscar" value="BUSCAR AHORA" />
-                </div>
-            </div>
-      </form>
-      
-
-      <div>
-      <button onClick={alertModal_Succes}> Success </button>
-      <button onClick={alertModal_Danger}> Error </button>
-
-      </div>
-
-
-        {/* --> final del modal */}
-    </Modal>
-
-      <Modal
-      isOpen={modalIsOpen2}
-      onAfterOpen={afterOpenModal2}
-      onRequestClose={closeModal2}
-      
-      contentLabel="Example Modal"
-    >
-
-      <h3 ref={_subtitle2 => (subtitle2 = _subtitle2)} className="forma t_center"> CARGAR ARCHIVO</h3>
-
-      <button onClick={closeModal2} className="close_mod"><img src={close_m}/></button>
-      {/* Ingresar datos modal aqui */}
-
-      <form className="inputs_filter">
-            
-            <div className="d50 center mar_t_3">
-                <div className="forma mar_t_1">
-                    <input id="upload" type="file"/>
-                    <label for="upload" className="upload forma">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-                            <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
-                        </svg>
-                        <span> Carga tu archivo...</span>
-                    </label>
-                </div>
-                <div className="forma mar_t_3">
-                <div className="d45 left_">
-                
-                    <label className="forma">Fecha inicial</label>
-                    <input type="date" id="start" name="" min="2018-01-01" value="2018-07-22"/>
-        
-                </div>
-                <div class="d10 left_">&nbsp;</div>
-                <div className="d45 left_">
-                    <label className="forma">Fecha inicial</label>
-                    <input type="date" id="start" name="" min="2018-01-01" value="2018-07-22"/>
-                </div>
-                </div>
-                <div className="forma mar_t_2">
-                    <label className="forma">Terminal</label>
-                    <select className="select">
-                        <option>Visa / Master Card</option>
-                        <option>AMEX</option>
-                        <option>OXXO</option>
-                        <option>Paycash</option>
-                        <option>SPEI</option>
-                    </select>
-                </div>
-                <div className="forma">
-                    <input type="submit" className="bot_value mar_none_bot buscar" value="BUSCAR AHORA" />
-                </div>
-            </div>
-      </form>
-      
-      <div>
-      <button onClick={alertModal_Succes}> Success </button>
-      <button onClick={alertModal_Danger}> Error </button>
-      </div>
-      
-
-      
-        {/* --> final del modal */}
-    </Modal>
+    
   </div>
     
 
 
-        <div className="forma slider mar_t_6">
-            <div className="contenedor3 center">
-                <div className="d50 left_">
-                    <div className="forma bloque_prin bloque1">
-                        <div className="forma">
-                            <h1 className="d80 left_">
-                                PUNTO ELECTRÓNICO<br/> DIARIO
-                            </h1>
-                            <div className="d20 left_">
-                                <img src={icon1} />
+  <sections className="parallax">   
+        
+        <form className="forma validar" name='' action='tareas.html'>
+            <div className="contenedor3 center pad_lr_30">  
+                <h2 className="forma">
+                    Por favor llena los campos solicitados<br/><small><span>*</span> Campos necesarios</small>
+                </h2>
+                <div className="forma">
+                    <div className="forma mar_t_1  mar_b_3 cambio_t">
+                        <div className="d30 left_">
+                           <h3 className="titulo forma fiscales">Datos fiscales</h3>
+                        </div>
+                        <div className="d70 left_ fiscales_sec">
+                         &nbsp;
+                        </div>
+                    </div>
+                    <div className="forma">
+                       <div className="d50 left_ mov100">
+                        <div className="d80 center">
+
+                            <label className="forma"><span>*</span> Nombre del cliente (Razón Social)</label>
+                            <input className="forma obligatorio" type="text" name="name" id="name" value="" title='Por favor Ingrese Nombre del cliente'/>
+                        </div>
+                        </div>
+
+                        <div className="d50 left_ mov100">
+                            <div className="d80 center">
+                                <label className="forma"><span>*</span> Giro RFC</label>
+                                
+                                <input className="forma obligatorio" type="text" name="giro_rfc" id="giro_rfc" value="" title='Por favor Selecione Giro'/>
                             </div>
                         </div>
-                        <div className="forma">
-                            <p className="d80 left_">
-                                Carga tus archivos BATCHS diarios solo da click en el botón adjuntar.
-                            </p>
+                    </div>
+                    <div className="forma">   
+                        <div className="d50 left_ mov100">
+                            <div className="d80 center">
+                                <label className="forma"><span>*</span> RFC</label>
+                                <input className="forma obligatorio" type="text" name="rfc" id="rfc" value="" value="" title='Por favor Ingrese RFC'/>
+                            </div>
                         </div>
-                        <div className="forma">
-                            <button className="boton_gen boton1" onClick={openModal}>
-                                ADJUNTAR AHORA
-                            </button>
+
+                        <div className="d50 left_ mov100">
+                            <div className="d80 center">
+                                <label className="forma"><span>*</span> Giro MCC</label>
+                                <select className="forma obligatorio" name="mcc" id="mcc" value="" title='Por favor Selecione Giro MCC'>
+                                        <option value=''>Seleciona tu opción</option>
+                                        <option>Agencias de Viajes</option>
+                                        <option>Aseguradoras</option>
+                                        <option>Beneficencia</option>
+                                        <option>Comida Rapida</option>
+                                        <option>Colegios y Universidades</option>
+                                        <option>Entretenimiento</option>
+                                        <option>Estacionamientos</option>
+                                        <option>Farmacias</option>
+                                        <option>Gasolineras</option>
+                                        <option>Gobierno</option>
+                                        <option>Hospitales</option>
+                                        <option>Hoteles</option>
+                                        <option>Otros</option>
+                                        <option>Peaje</option>
+                                        <option>Restaurantes</option>
+                                        <option>Renta de Autos</option>
+                                        <option>Supermercados</option>
+                                        <option>Telecomunicaciones</option>
+                                        <option>Transporte Aereo</option>
+                                        <option>Transporte Terrestre de Pasajeros</option>
+                                        <option>Ventas al detalle (Retail)</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>    
-                </div>
+                    </div>  
+ 
+                        <div className="d50 left_ mov100">
+                            <div className="d80 center">
+                                <label className="forma"><span>*</span> Tipo de Persona Fiscal</label>
+                                <select className="forma obligatorio" name="mcc" id="mcc" value="" title='Por favor Selecione Giro MCC'>
+                                        <option value=''>Seleciona tu opción</option>
+                                        <option>Actividad Física con Actividad Empresarial</option>
+                                        <option>Persona Moral</option>
+                                        <option>ONG Autorizada</option>
+                                </select>
+                            </div>
+                        </div>
                 
-                <div className="d50 left_">
-                    <div className="forma bloque_prin bloque2">
-                        <div className="forma">
-                            <h1 className="d80 left_">
-                                PUNTO ELECTRÓNICO<br/> EXTRAQORDINARIO
-                            </h1>
-                            <div className="d20 left_">
-                                <img src={icon2} />
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center">
+                            <label className="forma"><span>*</span> Nombre comercial</label>
+                            <input className="forma obligatorio" type="text" name="comercial" id="comercial" value="" title='Por favor Ingrese Nombre comercial'/>
+                        </div>
+                    </div>
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center">
+                            <label className="forma"><span>*</span> Página web del comercio</label>
+                            <input className="forma obligatorio" type="text"  name="web" id="web" value="" title='Por favor Ingrese Página web' />
+                        </div>
+                    </div>
+                    <div className="forma">
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center mar_t_5">
+                            <div className="d50 left_">
+                                <label className="forma"><span>*</span> Comercio nuevo</label>
+                            </div>
+                            <div className="d50 left_">
+                               <div className="d80 si_no">
+                                   <div className="d25 left_">
+                                       <p>NO</p>
+                                   </div>
+                                   <div className="d50 left_">     
+                                       <input type="checkbox" className="input mar_none" id="switch"  name="comercio_nuevo" value="SI"  /><label className="label" for="switch">Toggle</label>
+                                   </div>
+                                   <div className="d25 left_ t_right">
+                                       <p>SI</p>
+                                   </div>
+                               </div>
                             </div>
                         </div>
-                        <div className="forma">
-                            <p className="d80 left_">
-                                Carga tus archivos BATCHS diarios solo da click en el botón adjuntar.
-                            </p>
-                        </div>
-                        <div className="forma">
-                            <button className="boton_gen boton2" onClick={openModal2}>
-                                ADJUNTAR AHORA
-                            </button>
+                    </div>
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center mar_t_5">
+                            <div className="d50 left_">
+                                <label className="forma"><span>*</span> Reactivación</label>
+                            </div>
+                            <div className="d50 left_">
+                               <div className="d80 si_no">
+                                   <div className="d25 left_">
+                                       <p>NO</p>
+                                   </div>
+                                   <div className="d50 left_">     
+                                       <input type="checkbox" className="input mar_none" id="switch_2"  name="reactivacion" value="SI" /><label className="label" for="switch_2">Toggle</label>
+                                   </div>
+                                   <div className="d25 left_ t_right">
+                                       <p>SI</p>
+                                   </div>
+                               </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                    <div className="forma mar_t_5 mar_b_5 left_ cambio_t">
+                        <div className="d30 left_">
+                           <h3 className="titulo forma fiscales">Datos del contacto del comercio</h3>
+                        </div>
+                        <div className="d70 left_ personales_sec">
+                         &nbsp;
+                        </div>
+                    </div>
+
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center">
+                            <label className="forma"><span>*</span> Nombre y Apellidos</label>
+                            <input className="forma obligatorio" type="text" id="nom_ap"  name="nom_ap" value="" title='Por favor Ingrese Nombre y Apellidos' />
+                        </div>
+                    </div>
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center">
+                            <label className="forma"><span>*</span> E-mail</label>
+                            <input className="forma obligatorio" type="email" id="email"  name="email" value="" title='Por favor Ingrese E-mail'/>
+                        </div>
+                    </div>
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center">
+                            <label className="forma"><span>*</span> Puesto</label>
+                            <input className="forma obligatorio" type="text" id="puesto"  name="puesto" value="" title='Por favor Ingrese Puesto'/>
+                        </div>
+                    </div>
+                    <div className="d50 left_ mov100">
+                        <div className="d80 center">
+                            <label className="forma"><span>*</span> Teléfono</label>
+                            <input className="forma obligatorio" type="tel" id="tel"  name="tel" value=""  title='Por favor Ingrese Teléfono' />
+                        </div>
+                    </div>
+
+                    <div className="forma mar_t_5 mar_b_2 left_ cambio_t">
+                        <div className="d30 left_">
+                           <h3 className="titulo forma fiscales">Datos de conversión</h3>
+                        </div>
+                        <div className="d70 left_ conversion_sec">
+                             &nbsp;
+                        </div>
+                    </div>  
+
+                    <div className="forma">
+                        <div className="d50 left_ mov100">
+                            <div className="d80 center">
+                                <label className="forma"><span>*</span> Número de transacciones por mes</label>
+                                
+                                
+                                 <input className="forma obligatorio" type="number" id="numero_de_trans"  name="numero_de_trans" value="" title='Por favor Ingrese Número de transacciones por mes' />
+                            </div>
+                            <div className="d80 center">
+                                <label className="forma"><span>*</span> Ticket promedio</label>
+                                
+                                
+                                <input className="forma obligatorio" type="number" id="ticket"  name="ticket" value="" title='Por favor Ingrese Ticket promedio' />
+
+                            </div>
+                            <div className="forma mar_t_3">
+                                <div className="d80 center">
+                                    <div className="d70 left_">
+                                        <label className="forma">Monto procesado por mes:&nbsp;</label>
+                                    </div>
+                                    <div className="d30 left_ color_b monto_por_mes">
+                                       <p>$0.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="d50 left_ border_l_px mov100">
+                            <div className="d80 center">    
+                                
+                                <div className="forma">
+                                    <div className="d50 left_">
+                                        <div className="d80 center">
+                                            <div className="forma">
+                                                <label className="forma"><span>*</span> Meses sin<br/>&nbsp;&nbsp;&nbsp;intereses</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="d50 left_ color_fff">
+                                        
+                                        <div className="forma">
+                                            <input className="input2 meses" type="checkbox" id="test1_" name="meses1" value="3 meses"/>
+                                            <label for="test1_"> 3 meses</label>
+                                        </div>
+                                        <div className="forma">
+                                            <input className="input2 meses" type="checkbox" id="test2_" name="meses2" value="6 meses" />
+                                            <label for="test2_"> 6 meses</label>
+                                        </div>   
+                                        <div className="forma">
+                                            <input className="input2 meses" type="checkbox" id="test3_" name="meses3" value="9 meses" />
+                                            <label for="test3_"> 9 meses</label>
+                                        </div>   
+                                        <div className="forma">
+                                            <input className="input2 meses" type="checkbox" id="test4_" name="meses4" value="12 meses"  />
+                                            <label for="test4_"> 12 meses</label>
+                                        </div>   
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div className="forma">
+                            <div className="forma mar_t_5 mar_b_2 left_ cambio_t">
+                                <div className="d30 left_">
+                                   <h3 className="titulo forma fiscales"><span>*</span> Medios de pago</h3>
+                                </div>
+                                <div className="d70 left_ pago_sec">
+                                     &nbsp;
+                                </div>
+                            </div> 
+                            <div className="d80 center">      
+                                <div className="forma">
+                                    <div className="d33 left_ color_fff mov100">
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test1" name="medio_de_pago1" value="Visa / Master Card" />
+                                            <label for="test1"> Visa / Master Card</label>
+                                        </div>                                          
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test2" name="medio_de_pago2" value="AMEX" />
+                                            <label for="test2"> AMEX</label>
+                                        </div>   
+
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test3" name="medio_de_pago3" value="OXXO" />
+                                            <label for="test3"> OXXO</label>
+                                        </div> 
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test4" name="medio_de_pago4" value="Paycash" />
+                                            <label for="test4"> Paycash</label>
+                                        </div>
+                                         <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test_5" name="medio_de_pago5" value="SPEI" />
+                                            <label for="test_5"> SPEI</label>
+                                        </div>                                                       
+
+                                         <div className="forma mar_t_2 S2">
+                                            <h3 className="titulo forma fiscales mar_b_1">Servicios</h3>
+                                            <div className="forma">
+                                                <input className="radio" type="radio" name="n1" id="id0" checked />
+                                                <label for="id0"> Secure Window</label>
+                                            </div>                                          
+                                            <div className="forma">
+                                                <input className="radio" type="radio" name="n1" id="id1"/>
+                                                <label for="id1"> Pago Pro</label>
+                                            </div> 
+                                            <div className="forma">
+                                                <input className="radio" type="radio" name="n1" id="id2"/>
+                                                <label for="id2"> Pago Pro 2.1</label>
+                                            </div>
+                                        </div>                                       
+                                         <div className="forma">
+                                             <input className="input2 natura" type="checkbox" id="test10" name="naturaleza2" value="Efectivo Paycash" />
+                                             <label for="test10"> Efectivo Paycash</label>
+                                         </div> 
+                                         <div className="forma">
+                                            <input className="input2 natura" type="checkbox" id="test11" name="naturaleza2" value="Efectivo OXXO" />
+                                            <label for="test11"> Efectivo OXXO</label>
+                                        </div>                                                      
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test12" name="medio_de_pago1" value="Transferencia SPEI" />
+                                            <label for="test12"> Transferencia SPEI</label>
+                                        </div>  
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test13" name="medio_de_pago1" value="Efectivo Store Pay" />
+                                            <label for="test13"> Efectivo Store Pay</label>
+                                        </div>  
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test14" name="medio_de_pago1" value="Tarjeta Presente" />
+                                            <label for="test14"> Tarjeta Presente</label>
+                                        </div>
+                                        <div className="forma">
+                                            <input className="input2 medios_dp" type="checkbox" id="test15" name="medio_de_pago1" value="TPV" />
+                                            <label for="test15"> TPV</label>
+                                        </div> 
+                                    </div>
+                                    <div className="d33 left_ border_l_px color_fff mov100">
+                                        <div className="d80 right_">
+                                                <div className="forma">
+                                                   <h3 className="titulo forma fiscales mar_b_1">Operativa</h3>
+                                                </div>
+                                            <div className="forma">
+                                                <input className="input2 operat" type="checkbox" id="test5" name="operativa1" value="Ecommerce" />
+                                                <label for="test5"> Ecommerce</label>
+                                            </div>                                          
+                                            <div className="forma">
+                                                <input className="input2 operat" type="checkbox" id="test6" name="operativa2" value="Recurrencia" />
+                                                <label for="test6"> Recurrencia</label>
+                                            </div>   
+                                            <div className="forma">
+                                                <input className="input2 operat" type="checkbox" id="test7" name="operativa3" value="Monto" />
+                                                <label for="test7"> Moto</label>
+                                            </div>    
+                                            <div className="forma mar_t_2">
+                                                <h3 className="titulo forma fiscales mar_b_1">Naturaleza</h3>
+                                             </div>
+                                             <div className="forma">
+                                                 <input className="input2 natura" type="checkbox" id="test8" name="naturaleza1" value="Nacional" />
+                                                 <label for="test8"> Nacional</label>
+                                             </div>                                          
+                                             <div className="forma">
+                                                 <input className="input2 natura" type="checkbox" id="test9" name="naturaleza2" value="Internacional" />
+                                                 <label for="test9"> Internacional</label>
+                                             </div> 
+                                             <div className="forma mar_t_2 S2">
+                                                <h3 className="titulo forma fiscales mar_b_1">Canal de Cobro</h3>
+                                                <div className="forma">
+                                                    <input className="radio" type="radio" name="n2" id="id3" checked />
+                                                    <label for="id3">Subafiliación<br/>Banorte-Inbursa</label>
+                                                </div>                                          
+                                                <div className="forma">
+                                                    <input className="radio" type="radio" name="n2" id="id4" />
+                                                    <label for="id4"> ID agregador</label>
+                                                </div> 
+                                                <div className="forma">
+                                                    <input className="radio" type="radio" name="n2" id="id5" />
+                                                    <label for="id5"> Modelo Integrador</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="d33 left_ border_l_px color_fff mov100">
+                                        <div className="d80 right_">
+                                            <div className="forma">
+                                               <h3 className="titulo forma fiscales mar_b_1">Adquisición</h3>
+                                            </div>
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test16" name="naturaleza1" value="Plataforma Web" />
+                                                <label for="test16"> Plataforma Web</label>
+                                            </div>                                          
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test17" name="naturaleza2" value="APP Movil" />
+                                                <label for="test17"> APP Movil</label>
+                                            </div> 
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test18" name="naturaleza2" value="IVR" />
+                                                <label for="test18"> IVR</label>
+                                            </div> 
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test19" name="naturaleza2" value="Call Center Propio" />
+                                                <label for="test19"> Call Center Propio</label>
+                                            </div> 
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test20" name="naturaleza2" value="Call Center Comisión" />
+                                                <label for="test20"> Call Center Comisión</label>
+                                            </div> 
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test21" name="naturaleza2" value="Facers. Toma de datos por APP" />
+                                                <label for="test21"> Facers.<br/>Toma de datos por APP</label>
+                                            </div>   
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test22" name="naturaleza2" value="Facers. Toma de datos escrito" />
+                                                <label for="test22"> Facers.<br/>Toma de datos escrito</label>
+                                            </div>  
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test23" name="naturaleza2" value="Establecimiento" />
+                                                <label for="test23"> Establecimiento</label>
+                                            </div> 
+                                            <div className="forma">
+                                                <input className="input2 natura" type="checkbox" id="test24" name="naturaleza2" value="Solicitudes de Pago" />
+                                                <label for="test24"> Solicitudes de Pago</label>
+                                            </div> 
+                                        </div>    
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                        <div className="forma mar_t_10 mar_b_10">
+                            <input type="submit" className="cotizar"/>
+                        </div>
+                    </div>
+                </div>
+
             </div>    
-        </div>
-        <div className="forma tit_it">
-            <h2 className="forma t_center"><i>CONCILIACIONES</i></h2>   
-        </div>
-        <div className="forma contenido_hom">
-            <div className="contenedor3 center">
-                
-                <HomeReportes></HomeReportes>
-                <HomeBitacora></HomeBitacora>
-                <HomeDashboard></HomeDashboard>
-                
-            </div>
-        </div>
-        <div className="forma tit_it mar_t_0">
-            <h2 className="forma t_center mar_t_0"><i>GENERA TU ÓRDEN</i></h2>   
-        </div>
-        <div className="forma orden">
-            <div className="contenedor3 center">
-              <div className="forma mar_t_10">
-                  <div className="d95 center">
-                        <HomeOrdenCompra></HomeOrdenCompra>
-                        <HomeOrdenVenta></HomeOrdenVenta>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <Footer></Footer>
+        </form>
+        
+    </sections> 
+     <Footer></Footer>
         
     </div>
       </header>

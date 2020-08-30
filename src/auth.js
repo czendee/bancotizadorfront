@@ -18,7 +18,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
             ): (
                 <Redirect 
                 to={{
-                    pathname: '/chargebacks',
+                    pathname: '/quote',
                     state: {message: 'Ingresa tus accesos'}
                 }}
                 />
@@ -32,7 +32,7 @@ const PublicRoute = ({component: Component, ...rest}) => {
         <Route {...rest} render={props => isAuth() ? (
             <Redirect 
             to={{
-                pathname: '/chargebacks/home',
+                pathname: '/quote',
                 state: {message: 'Session Activa'}
             }}
             />

@@ -35,17 +35,14 @@ const Header = (props) => {
             </a>
           
             <div className="menu_ d60 left_ t_right menu">
-              <a href="/chargebacks" className="menu_a menu_a_1">
-                REGLAS&nbsp;DE&nbsp;NEGOCIO
+              <a href="/quote/home" className="menu_a menu_a_1">
+                COTIZADOR
               </a>
-              <a href="/chargebacks" className="menu_a menu_a_2">
-                REPORTES
+              <a href="/quote/quotes" className="menu_a menu_a_2">
+                COTIZACIONES
               </a>
-              <a href="/chargebacks" className="menu_a menu_a_1">
-                MANUALES
-              </a>
-              <a href="/chargebacks" className="menu_a menu_a_2">
-                &#128276;
+              <a href="/quote/users" className="menu_a menu_a_1">
+                USUARIOS
               </a>
               <a onClick={props.logOut} className="menu_a menu_a_2">
               {showData()} / SALIR

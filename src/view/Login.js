@@ -101,7 +101,7 @@ class Login extends Component {
         .then(token => {
             localStorage.setItem("token-chargebacks-jwt", token.access_token);
             localStorage.setItem("token-chargebacks-refresh", token.refresh_token);
-            this.props.history.push("/chargebacks/home");
+            this.props.history.push("/quote/home");
             return;
         })
         .catch(e => {
