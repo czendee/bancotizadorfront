@@ -216,185 +216,189 @@ const UsersDetails = (props) => {
     
 
 
-  <div class="forma slider_tab .slider_tab mar_t_5">
-        <div class="contenedor3 center">
-            <div class="forma">               
-                <h1 class="forma left_ t_center mar_t_10">
+  <div className="forma slider_tab .slider_tab mar_t_5">
+        <div className="contenedor3 center">
+            <div className="forma">               
+                <h1 className="forma left_ t_center mar_t_10">
                     USUARIO
                 </h1>
             </div>
         </div>    
     </div>
-    <div class="forma tit_it">
-        <div class="contenedor3 center">
-            <div class="forma orde_det">
-                <div class="d33 left_">    
+    <div className="forma tit_it">
+        <div className="contenedor3 center">
+            <form className="forma orde_det">
+                <div className="d33 left_">    
                     
-                    <form class="forma inputs_filter mar_t_3">
-                    <h2 class="forma t_left">Datos de usuario</h2>
-                    <div class="forma mar_t_3 mar_b_2">
-                            <label class="forma">Tipo de Usuario</label>
-                            <select class="select t_left">
+                    <div className="forma inputs_filter mar_t_3">
+                    <h2 className="forma t_left">Datos de usuario</h2>
+                    <div className="forma mar_t_3 mar_b_2">
+                            <label className="forma">Tipo de Usuario</label>
+                            <select className="select t_left">
                             <option value="">Administrador</option>
                             <option>Asesor</option>
                             <option>Agente</option>
                             </select>
                         </div>
-                        <div class="forma mar_b_2">
-                            <label class="forma">Nombre del Usuario</label>
-                            <input type="text" class="t_left" name="" placeholder="Victor Erick Rodríguez Gil"/>
+                        <div className="forma mar_b_2">
+                            <label className="forma">Nombre del Usuario</label>
+                            <input type="text" className="t_left" name="" placeholder="Victor Erick Rodríguez Gil"/>
                         </div>
-                        <div class="forma mar_b_2">
-                            <label class="forma">Teléfono</label>
-                            <input type="text" class="t_left" name="" placeholder="55 1492 5259"/>
+                        <div className="forma mar_b_2">
+                            <label className="forma">Teléfono</label>
+                            <input type="text" className="t_left" name="" placeholder="55 1492 5259"/>
                         </div>
-                        <div class="forma mar_b_2">
-                            <label class="forma">E-mail</label>
-                            <input type="text" class="t_left" name="" placeholder="erodriguez@banwire.com"/>
+                        <div className="forma mar_b_2">
+                            <label className="forma">E-mail</label>
+                            <input type="text" className="t_left" name="" placeholder="erodriguez@banwire.com"/>
                         </div>
-                        <div class="forma mar_b_2">
-                            <label class="forma">Vincular cuentas</label>
-                            <input type="text" class="t_left" name="" placeholder=""/>
+                        <div className="forma mar_b_2">
+                            <label className="forma">Vincular cuentas</label>
+                            <input type="text" className="t_left" name="" placeholder=""/>
                         </div>
-                    </form>
+                        <div className="forma mar_b_2">
+                            <label className="forma">Corizaciones</label>
+                            <a href="/quote/quotes" className="mar_t_2 user_tab forma">5</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="d66 left_ mar_t_3">
-                <div class="d90 right_">
-                <h2 class="forma t_left">Permisos</h2>
-                <div class="d50 left_">
-                    <div class="d90 right_ mar_t_3">
+                <div className="d66 left_ mar_t_3">
+                <div className="d90 right_">
+                <h2 className="forma t_left">Permisos</h2>
+                <div className="d50 left_">
+                    <div className="d90 right_ mar_t_3">
                    
-                        <h4 class="forma t_left ">Cuenta personal</h4> 
-                        <div class="check_int forma">
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Nombre</label>
+                        <h4 className="forma t_left ">Cuenta personal</h4> 
+                        <div className="check_int forma">
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Nombre</label>
                             </div>
                             
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Teléfono</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Teléfono</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Permiso para Vincular cuentas</label>
-                            </div>
-                        </div>
-                        <h4 class="forma t_left">Cuentas vinculadas</h4> 
-                        <div class="check_int forma">
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Permisos</label>
-                            </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Nombres</label>
-                            </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Teléfono</label>
-                            </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Rol de cuenta</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Permiso para Vincular cuentas</label>
                             </div>
                         </div>
-                        <h4 class="forma t_left">Cuentas globales</h4> 
-                        <div class="check_int forma">
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Creación de Cuentas</label>
+                        <h4 className="forma t_left">Cuentas vinculadas</h4> 
+                        <div className="check_int forma">
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Permisos</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Eliminación de Cuentas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Nombres</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Clonación de Cuentas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Teléfono</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Nombres en cuentas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Rol de cuenta</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Teléfonos en cuentas</label>
+                        </div>
+                        <h4 className="forma t_left">Cuentas globales</h4> 
+                        <div className="check_int forma">
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Creación de Cuentas</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Roles de cuentas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Eliminación de Cuentas</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Permisos en cuentas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Clonación de Cuentas</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Permiso para Vincular cuentas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Nombres en cuentas</label>
+                            </div>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Teléfonos en cuentas</label>
+                            </div>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Roles de cuentas</label>
+                            </div>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Permisos en cuentas</label>
+                            </div>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Permiso para Vincular cuentas</label>
                             </div>
                         </div>
                         
                     </div>
                 </div>
-                <div class="d50 left_ mar_t_3">
-                    <div class="d90 right_">
+                <div className="d50 left_ mar_t_3">
+                    <div className="d90 right_">
                     
 
-                        <h4 class="forma t_left">Cotizaciones Personales</h4> 
-                        <div class="check_int forma">
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Visualizar Cotizaciones personales</label>
+                        <h4 className="forma t_left">Cotizaciones Personales</h4> 
+                        <div className="check_int forma">
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Visualizar Cotizaciones personales</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Tasas fijas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Tasas fijas</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Tasas variables</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Tasas variables</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Descuentos</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Descuentos</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Eliminar Cotizaciones</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Eliminar Cotizaciones</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Generación de Cotizaciones PDF</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Generación de Cotizaciones PDF</label>
                             </div>
                         </div>
 
-                        <h4 class="forma t_left">Cotizaciones Globales</h4> 
-                        <div class="check_int forma">
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Visualizar Cotizaciones globales</label>
+                        <h4 className="forma t_left">Cotizaciones Globales</h4> 
+                        <div className="check_int forma">
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Visualizar Cotizaciones globales</label>
                             </div>
                             
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Tasas fijas</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Tasas fijas</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Tasas variables</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Tasas variables</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Edición de Descuentos</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Edición de Descuentos</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Eliminar Cotizaciones</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Eliminar Cotizaciones</label>
                             </div>
-                            <div class="forma mar_b_2">
-                                <input type="checkbox" class="t_left" name=""/>
-                                <label class="left_">Generación de Cotizaciones PDF</label>
+                            <div className="forma mar_b_2">
+                                <input type="checkbox" className="t_left" name=""/>
+                                <label className="left_">Generación de Cotizaciones PDF</label>
                             </div>
                             
                         </div>
@@ -403,14 +407,14 @@ const UsersDetails = (props) => {
                     
                 </div>
                 </div> 
-                <div class="forma">
-                                <div class="d90 center">
-                                    <div class="forma">
-                                    <input type="submit" class="right_ mar_t_3 bot_value bot_value2" value="GUARDAR USUARIO" />
+                <div className="forma">
+                                <div className="d90 center">
+                                    <div className="forma">
+                                    <input type="submit" className="right_ mar_t_3 bot_value bot_value2" value="GUARDAR USUARIO" />
                                     </div>
                                 </div>
                             </div>
-            </div>  
+            </form>  
         </div> 
     </div>
      

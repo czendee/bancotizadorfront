@@ -2,16 +2,16 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import edit from '../../assets/img/edit.svg';
-import download from '../../assets/img/download.svg';
+import copy from '../../assets/img/document.svg';
 import trash from '../../assets/img/trash.svg';
 const TablaUsuarios= () => {
     
 
   return (
       <Fragment>
-         <table class="forma tab_repo">
-                    <tbody class="forma catorce">
-                        <tr class="forma">
+         <table className="forma tab_repo">
+                    <tbody className="forma catorce">
+                        <tr className="forma">
                             <th>
                                 TIPO DE USUARIO
                             </th>
@@ -24,17 +24,17 @@ const TablaUsuarios= () => {
                             <th>
                                 EMAIL
                             </th>
-                            <th>
+                            <th className="t_center">
                                 NO.COTIZACIONES
                             </th>
-                            <th>
+                            <th className="t_center">
                                 AGENTES
                             </th>
-                            <th class="padd_0 back_r">
+                            <th className="padd_0 back_r t_center">
                                 ACCIONES
                             </th>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -47,22 +47,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -75,22 +78,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -103,22 +109,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -131,22 +140,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -159,22 +171,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -187,22 +202,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -215,22 +233,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -243,22 +264,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -271,22 +295,25 @@ const TablaUsuarios= () => {
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                            <a href="" class="right_ d33 icons_a">
+                            <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 Administrador
                             </td>
@@ -294,23 +321,27 @@ const TablaUsuarios= () => {
                                 Victor Erick Rodríguez
                             </td>
                             <td>
-                               55 1492 5259
+                               55 1492 
+                               5259
                             </td>
                             <td>
                                 erodriguez@banwire.com
                             </td>
-                            <td>
-                                5
+                            <td className="t_center">
+                               <a href="/quote/quotes" className="user_tab">5</a>
+                            </td>
+                            <td className="t_center">
+                                <a href="/quote/users" className="user_tab">3</a>
                             </td>
                             <td>
-                                3
-                            </td>
-                            <td>
-                                <a href="" class="right_ d33 icons_a">
+                                <a href="" className="right_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
-                                <a href="/quote/usersdetails" class="right_ d33 icons_a">
+                                <a href="/quote/usersdetails" className="right_ d33 icons_a">
                                     <img src={edit} /> 
+                                </a>
+                                <a href="" className="right_ d33 icons_a">
+                                    <img src={copy} /> 
                                 </a>
                             </td>
                         </tr>

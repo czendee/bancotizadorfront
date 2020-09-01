@@ -21,10 +21,14 @@
  font-style: normal;
 }
 
+a{
+      font-family: 'Ubuntu-Bold'!important;
+}
 a, input{
     -webkit-transition: all 0.20s ease-out;
        -moz-transition: all 0.20s ease;
        -ms-transition: all 0.20s ease;
+       text-decoration:none;
 }
 html {
  height: 100%;
@@ -84,7 +88,7 @@ body {
    text-align: right;
 }
 .t_center{
-   text-align: center;
+   text-align: center!important;
 }
 .t_justify{
    text-align: justify;
@@ -286,7 +290,7 @@ width: 3%;
    margin-top:90px; 
 }
 .mar_t_10{
-   margin-top:100px!important; 
+   margin-top:67px!important; 
 }
 .mar_r_10 {
    margin-right: 70px;
@@ -522,7 +526,7 @@ h2{
 .slider_tab{
    background: url(../img/bak_list.jpg) center top repeat;
    color: #fff;
-   height: 255px;
+   height: 155px;
 }
 .slider{
    background: url(../img/slider.png) center top repeat;
@@ -811,7 +815,7 @@ box-shadow: 0px 9px 43px -13px rgba(0,0,0,0);
    text-decoration: none;
    font-weight: normal!important;
    letter-spacing:0!important;
-   font-size: 14px;
+   font-size: 13x;
    height: 42px;
    font-family: 'ubunturegular';
 }
@@ -823,6 +827,7 @@ box-shadow: 0px 9px 43px -13px rgba(0,0,0,0);
    box-sizing: border-box;
    letter-spacing: 0;
    border-right: 1px solid #9eb6c6;
+   font-size: 13px;
 }
 .bot_value{
 background: #ff3146;
@@ -850,6 +855,9 @@ background: #ff3146;
 .bord_tab_top{
    border-bottom: 1px solid #d6d6d6;
    border-top: 1px solid #d6d6d6;
+}
+.h_100, #root{
+   height:100%;
 }
 .mostrar{
    font-size: 18px;
@@ -883,8 +891,8 @@ background: #ff3146;
 .bitacora th, .bitacora td {
    width: 16.66666666%;
 }
-.terminales th,.terminales td{
-    width: 20%;
+.terminale .o_c_d th, .terminale .o_c_d td{
+   padding:0!important;
 }
 .tab_repo th {
    color: #fff;
@@ -927,13 +935,29 @@ h4 {
 .bitacora th, .bitacora td {
    width: 16.66666666%;
 }
-.terminales th,.terminales td{
-    width: 20%;
+.terminales th, .terminales td {
+   width: 25%!important;
+   border: none!important;
+   box-sizing: border-box;
+   float: left;
+}
+.terminales th {
+   padding: 29px 10px;
+}
+.terminales td {
+   padding: 21px 10px;
+}
+.terminales tr:nth-child(2n+1){
+   background:#eaeaea ;
 }
 .contenido_tabs th {
    color: #fff;
    background: #516472;
    height: 73px;
+}
+.plus {
+   width: 17px;
+   margin: 0 10px -3px 0;
 }
 .contenido_tabs tr:nth-child(odd){
    background: #fff;
@@ -946,6 +970,12 @@ h4 {
    font-family: 'ubunturegular';
    height: 14px;
    text-align: center;
+   background: none;
+}
+
+.o_c_d input{
+   float: left;
+   width: 100%;
 }
 .back_r{
    background: #ff3146!important;
@@ -1543,8 +1573,8 @@ transform: translateX(5px) !important; }
    fill: #556471!important;
    
 }
-.bot_value2{
-   padding: 10px 70px;
+.bot_value2 {
+   padding: 10px;
    float: none;
    width: 70%;
    margin: 40px auto!important;
@@ -1934,15 +1964,15 @@ color:#fff;
    letter-spacing: 1px;
    margin: 130px auto 0!important;
    float: left!important;
-   font-size: 34px;
-   border:none!important;
+   font-size: 25px;
+   border: none!important;
 }
 .fiscales {
    color: #fff!important;
    font-family: 'Ubuntu-Bold';
    letter-spacing: 1px;
    margin: 20px 0;
-   font-size: 21px;
+   font-size: 18px;
 }
 .mar_neg_10 {
    margin: 0px auto 0;
@@ -1985,7 +2015,7 @@ color:#fff;
    padding: 10px 20px!important;
    font-family: 'ubunturegular';
    color: #353f48;
-   font-size: 20px;
+   font-size: 15px;
 }
 .parallax input:focus, .parallax select:focus{
    background: #fff;
@@ -1997,6 +2027,7 @@ color:#fff;
    letter-spacing: 2px;
    margin: 20px 0 10px!important;
    float: left!important;
+   font-size: 13px;
 }
 .parallax .input[type=checkbox]{
   height: 0;
@@ -2164,6 +2195,12 @@ element.style {
 .color_fff label{
    color:#fff!important;
 }
+.slider_tab h1{
+   font-size: 22px;
+}
+.tit_it h2{
+   font-size: 16px;
+}
 .test25{
    float: right!important;
 }
@@ -2324,4 +2361,16 @@ span{
    select{
        height: 52px!important;
    }
+   .orde_det .d33, .orde_det .d66, .orde_det .d50 {
+      width:100%;
+   }
+   #right {
+      float: left!important;
+  }
+  .parallax table {
+   font-size: 10px!important;
+}
+.terminales select{
+      height: 16px!important;
+}
 }

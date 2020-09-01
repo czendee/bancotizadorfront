@@ -4,6 +4,35 @@ import React, { Fragment } from "react";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 // Component
+
+class HomeClass extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+            loading:false,
+            pokemon:[],
+            url:'https://pokeapi.co/api/v2/pokemon/'
+        }
+    }
+    componentDidMount(){
+        this.getPokemon();
+    }
+    getPokemon = () => {
+            this.setState({loading:true})
+            fetch(this.state.url)
+            .then(res => res.json())
+            .then(res => {
+                this.setState({
+                    pokemon: res.results,
+                    url: res.next,
+                    loading:false
+                })
+
+         });
+    };
+
+}
+
 const Home = (props) => {
 
    
@@ -116,7 +145,7 @@ const Home = (props) => {
  
                         <div className="d50 left_ mov100">
                             <div className="d80 center">
-                                <label className="forma"><span>*</span> Tipo de Persona Fiscal</label>
+                                <label className="forma"><span>*</span> Personalidad fiscal</label>
                                 <select className="forma obligatorio" name="mcc" id="mcc" value="" title='Por favor Selecione Giro MCC'>
                                         <option value=''>Seleciona tu opción</option>
                                         <option>Actividad Física con Actividad Empresarial</option>
@@ -138,48 +167,7 @@ const Home = (props) => {
                             <input className="forma obligatorio" type="text"  name="web" id="web" value="" title='Por favor Ingrese Página web' />
                         </div>
                     </div>
-                    <div className="forma">
-                    <div className="d50 left_ mov100">
-                        <div className="d80 center mar_t_5">
-                            <div className="d50 left_">
-                                <label className="forma"><span>*</span> Comercio nuevo</label>
-                            </div>
-                            <div className="d50 left_">
-                               <div className="d80 si_no">
-                                   <div className="d25 left_">
-                                       <p>NO</p>
-                                   </div>
-                                   <div className="d50 left_">     
-                                       <input type="checkbox" className="input mar_none" id="switch"  name="comercio_nuevo" value="SI"  /><label className="label" for="switch">Toggle</label>
-                                   </div>
-                                   <div className="d25 left_ t_right">
-                                       <p>SI</p>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="d50 left_ mov100">
-                        <div className="d80 center mar_t_5">
-                            <div className="d50 left_">
-                                <label className="forma"><span>*</span> Reactivación</label>
-                            </div>
-                            <div className="d50 left_">
-                               <div className="d80 si_no">
-                                   <div className="d25 left_">
-                                       <p>NO</p>
-                                   </div>
-                                   <div className="d50 left_">     
-                                       <input type="checkbox" className="input mar_none" id="switch_2"  name="reactivacion" value="SI" /><label className="label" for="switch_2">Toggle</label>
-                                   </div>
-                                   <div className="d25 left_ t_right">
-                                       <p>SI</p>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
                     <div className="forma mar_t_5 mar_b_5 left_ cambio_t">
                         <div className="d30 left_">
                            <h3 className="titulo forma fiscales">Datos del contacto del comercio</h3>
@@ -279,6 +267,17 @@ const Home = (props) => {
                                             <label for="test4_"> 12 meses</label>
                                         </div>   
                                     </div>
+
+                                    <div className="forma mar_t_3 left_">
+                                        <div className="d80 center">
+                                            <div className="forma">
+                                                <input className="input2 meses" type="checkbox" id="test1_" name="meses1" value="3 meses"/>
+                                                <label className="forma"><span>*</span> Experiencia E-commerce</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+
                                 </div>    
                             </div>
                         </div>
@@ -315,66 +314,8 @@ const Home = (props) => {
                                          <div className="forma">
                                             <input className="input2 medios_dp" type="checkbox" id="test_5" name="medio_de_pago5" value="SPEI" />
                                             <label for="test_5"> SPEI</label>
-                                        </div>                                                       
-
-                                         <div className="forma mar_t_2 S2">
-                                            <h3 className="titulo forma fiscales mar_b_1">Servicios</h3>
-                                            <div className="forma">
-                                                <input className="radio" type="radio" name="n1" id="id0" checked />
-                                                <label for="id0"> Secure Window</label>
-                                            </div>                                          
-                                            <div className="forma">
-                                                <input className="radio" type="radio" name="n1" id="id1"/>
-                                                <label for="id1"> Pago Pro</label>
-                                            </div> 
-                                            <div className="forma">
-                                                <input className="radio" type="radio" name="n1" id="id2"/>
-                                                <label for="id2"> Pago Pro 2.1</label>
-                                            </div>
-                                        </div>                                       
-                                         <div className="forma">
-                                             <input className="input2 natura" type="checkbox" id="test10" name="naturaleza2" value="Efectivo Paycash" />
-                                             <label for="test10"> Efectivo Paycash</label>
-                                         </div> 
-                                         <div className="forma">
-                                            <input className="input2 natura" type="checkbox" id="test11" name="naturaleza2" value="Efectivo OXXO" />
-                                            <label for="test11"> Efectivo OXXO</label>
-                                        </div>                                                      
-                                        <div className="forma">
-                                            <input className="input2 medios_dp" type="checkbox" id="test12" name="medio_de_pago1" value="Transferencia SPEI" />
-                                            <label for="test12"> Transferencia SPEI</label>
-                                        </div>  
-                                        <div className="forma">
-                                            <input className="input2 medios_dp" type="checkbox" id="test13" name="medio_de_pago1" value="Efectivo Store Pay" />
-                                            <label for="test13"> Efectivo Store Pay</label>
-                                        </div>  
-                                        <div className="forma">
-                                            <input className="input2 medios_dp" type="checkbox" id="test14" name="medio_de_pago1" value="Tarjeta Presente" />
-                                            <label for="test14"> Tarjeta Presente</label>
-                                        </div>
-                                        <div className="forma">
-                                            <input className="input2 medios_dp" type="checkbox" id="test15" name="medio_de_pago1" value="TPV" />
-                                            <label for="test15"> TPV</label>
                                         </div> 
-                                    </div>
-                                    <div className="d33 left_ border_l_px color_fff mov100">
-                                        <div className="d80 right_">
-                                                <div className="forma">
-                                                   <h3 className="titulo forma fiscales mar_b_1">Operativa</h3>
-                                                </div>
-                                            <div className="forma">
-                                                <input className="input2 operat" type="checkbox" id="test5" name="operativa1" value="Ecommerce" />
-                                                <label for="test5"> Ecommerce</label>
-                                            </div>                                          
-                                            <div className="forma">
-                                                <input className="input2 operat" type="checkbox" id="test6" name="operativa2" value="Recurrencia" />
-                                                <label for="test6"> Recurrencia</label>
-                                            </div>   
-                                            <div className="forma">
-                                                <input className="input2 operat" type="checkbox" id="test7" name="operativa3" value="Monto" />
-                                                <label for="test7"> Moto</label>
-                                            </div>    
-                                            <div className="forma mar_t_2">
+                                        <div className="forma mar_t_2">
                                                 <h3 className="titulo forma fiscales mar_b_1">Naturaleza</h3>
                                              </div>
                                              <div className="forma">
@@ -384,16 +325,32 @@ const Home = (props) => {
                                              <div className="forma">
                                                  <input className="input2 natura" type="checkbox" id="test9" name="naturaleza2" value="Internacional" />
                                                  <label for="test9"> Internacional</label>
-                                             </div> 
-                                             <div className="forma mar_t_2 S2">
-                                                <h3 className="titulo forma fiscales mar_b_1">Canal de Cobro</h3>
+                                             </div>                                                       
+                                    </div>
+                                    <div className="d33 left_ border_l_px color_fff mov100">
+                                        <div className="d80 right_">
                                                 <div className="forma">
-                                                    <input className="radio" type="radio" name="n2" id="id3" checked />
-                                                    <label for="id3">Subafiliación<br/>Banorte-Inbursa</label>
-                                                </div>                                          
+                                                   <h3 className="titulo forma fiscales mar_b_1">Operativa</h3>
+                                                </div>
+                                            <div className="forma">
+                                                <input className="input2 operat" type="checkbox" id="test5" name="operativa1" value="Ecommerce" />
+                                                <label for="test5"> Cobro único</label>
+                                            </div>                                          
+                                            <div className="forma">
+                                                <input className="input2 operat" type="checkbox" id="test6" name="operativa2" value="Recurrencia" />
+                                                <label for="test6"> Cobro recurrente automático</label>
+                                            </div>   
+                                            <div className="forma">
+                                                <input className="input2 operat" type="checkbox" id="test7" name="operativa3" value="Monto" />
+                                                <label for="test7"> Cobro recurrente automático on demand</label>
+                                            </div>    
+                                            
+                                             <div className="forma mar_t_2 S2">
+                                                <h3 className="titulo forma fiscales mar_b_1">Modelo</h3>
+                                                                                       
                                                 <div className="forma">
                                                     <input className="radio" type="radio" name="n2" id="id4" />
-                                                    <label for="id4"> ID agregador</label>
+                                                    <label for="id4"> Módelo Agregador</label>
                                                 </div> 
                                                 <div className="forma">
                                                     <input className="radio" type="radio" name="n2" id="id5" />

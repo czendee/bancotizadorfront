@@ -38,7 +38,7 @@ const Users = (props) => {
             <div className="contenedor3 center">
                 <div className="forma">               
                     <h1 className="forma left_ t_center mar_t_10">
-                        Usuarios
+                        USUARIOS
                     </h1>
                 </div>
             </div>    

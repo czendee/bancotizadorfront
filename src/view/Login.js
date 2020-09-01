@@ -114,13 +114,13 @@ class Login extends Component {
 
   return (
     <Fragment>
-    <div className="App">
-    <header className = "App-header">
+    <div className="App h_100">
+    <header className = "App-header h_100">
 
 
-    <div className="forma login">
-        <div className="contenedor3 center">
-            <div className="d50 left_">
+    <div className="forma login h_100">
+        <div className="contenedor3 center h_100">
+            <div className="d50 center">
                 <form className="d70 left_ form_log" name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm}> 
 
                     <img src={logo} className="center no_mov logo_log_" />

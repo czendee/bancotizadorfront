@@ -102,8 +102,8 @@ const Quote = (props) => {
                             <tbody className="forma" id="tabla_cotizador">
                                 <tr className="forma">
                                     <td className="d25 left_"><b>Visa/MasterCard</b></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="2.90%"/></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="$2.50%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="2.90%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="$2.50%"/></td>
                                     <td className="d25 left_ nopad">
                                         <select className="forma" name="Descuento Visa/MasterCard" id="dvm" value="" title='Descuento Visa/MasterCard'>
                                             <option>0%</option>
@@ -115,8 +115,8 @@ const Quote = (props) => {
                                 </tr>
                                 <tr className="forma">
                                     <td className="d25 left_"><b>AMEX</b></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="4.50%"/></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="$2.50"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="4.50%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="$2.50"/></td>
                                     <td className="d25 left_ nopad">
                                         <select className="forma" name="Descuento AMEX" id="damx" value="" title='Descuento AMEX'>
                                             <option>0%</option>
@@ -128,8 +128,8 @@ const Quote = (props) => {
                                 </tr>
                                 <tr className="forma">
                                     <td className="d25 left_"><b>Oxxo</b></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="3.00%"/></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="$2.50"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="3.00%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="$2.50"/></td>
                                     <td className="d25 left_ nopad">
                                         <select className="forma" name="Descuento OXXO" id="dox" value="" title='Descuento OXXO'>
                                             <option>0%</option>
@@ -141,8 +141,8 @@ const Quote = (props) => {
                                 </tr>
                                 <tr className="forma">
                                     <td className="d25 left_"><b>Paycash</b></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="0.00%"/></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="$20.00"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="0.00%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="$20.00"/></td>
                                     <td className="d25 left_ nopad">
                                         <select className="forma" name="Descuento Paycash" id="dpy" value="" title='Descuento Paycash'>
                                             <option>0%</option>
@@ -154,8 +154,8 @@ const Quote = (props) => {
                                 </tr>
                                 <tr className="forma">
                                     <td className="d25 left_"><b>SPEI</b></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="2.00%"/></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="$8.50"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="2.00%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="$8.50"/></td>
                                     <td className="d25 left_ nopad">
                                         <select className="forma" name="Descuento SPEI" id="dspi" value="" title='Descuento SPEI'>
                                             <option>0%</option>
@@ -167,8 +167,8 @@ const Quote = (props) => {
                                 </tr>
                                 <tr className="forma">
                                     <td className="d25 left_"><b>Store Pay</b></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="0.00%"/></td>
-                                    <td className="d25 left_ pad_none"><input type="number" class="inp_num" placeholder="$20.00"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="0.00%"/></td>
+                                    <td className="d25 left_ pad_none"><input type="number" className="inp_num" placeholder="$20.00"/></td>
                                     <td className="d25 left_ nopad">
                                         <select className="forma" name="Descuento Store Pay" id="dstp" value="" title='Descuento Store Pay'>
                                             <option>0%</option>

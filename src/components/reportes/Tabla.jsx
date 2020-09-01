@@ -9,9 +9,9 @@ const TablaReportes= () => {
 
   return (
       <Fragment>
-         <table class="forma tab_repo">
-                    <tbody class="forma doce">
-                        <tr class="forma">
+         <table className="forma tab_repo">
+                    <tbody className="forma doce">
+                        <tr className="forma">
                             <th>
                                 ID
                             </th>
@@ -34,11 +34,11 @@ const TablaReportes= () => {
                                 MONTO X MES
                             </th>
                             
-                            <th class="padd_0 back_r">
+                            <th className="padd_0 back_r">
                                 ACCIONES
                             </th>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -46,7 +46,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -62,18 +62,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -81,7 +81,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -97,18 +97,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -116,7 +116,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -132,18 +132,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -151,7 +151,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -167,18 +167,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -186,7 +186,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -202,18 +202,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -221,7 +221,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -237,18 +237,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -256,7 +256,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -272,18 +272,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -291,7 +291,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -307,18 +307,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -326,7 +326,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -342,18 +342,18 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>
                         </tr>
-                        <tr class="forma">
+                        <tr className="forma">
                             <td>
                                 D22SG-JG
                             </td>
@@ -361,7 +361,7 @@ const TablaReportes= () => {
                                 20 / 03 / 2020
                             </td>
                             <td>
-                                <a class="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
+                                <a className="user_tab" href="/quote/usersdetails">Ejecutivo 1</a>
                             </td>
                             <td>
                                 Negocio 1
@@ -377,13 +377,13 @@ const TablaReportes= () => {
                             </td>
                             
                             <td>
-                                <a href="/quote/quotedetails" class="left_ d33 icons_a">
+                                <a href="/quote/quotedetails" className="left_ d33 icons_a">
                                     <img src={edit} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={download} /> 
                                 </a>
-                                <a href="" class="left_ d33 icons_a">
+                                <a href="" className="left_ d33 icons_a">
                                     <img src={trash} /> 
                                 </a>
                             </td>

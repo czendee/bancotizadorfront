@@ -29,7 +29,7 @@ const Header = (props) => {
       <div className="forma menu__">
         <div className="contenedor3 center">
           <nav className="forma sombra_menu">
-            <a href="/" className="d30 left_">
+            <a href="/quote/home" className="d30 left_">
               <img src={logo} className="logo_menu no_mov" />
               <img src={logo2_h} className="logo_menu center mov" />
             </a>
