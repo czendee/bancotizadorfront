@@ -7,7 +7,7 @@ services:
         container_name: quote-banwire-front
         restart: always
         ports:
-            - "8070:80"
+            - "8060:80"
         environment: 
             - NODE_ENV=production
             - PUBLIC_URL=https://sandbox.banwire.com/quote-front/
