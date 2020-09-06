@@ -67,7 +67,7 @@ class Login extends Component {
       return formIsValid;
     }
     
-    signIn = () => {
+    traeCotizaciones = () => {
 
         const data = { email: this.email, password: this.password};
         const requestInfo = {
@@ -108,7 +108,50 @@ class Login extends Component {
             this.setState({ message: e.message });   
         });
     }
-    
+
+        signIn = () => {
+
+        const data = { email: this.email, password: this.password};
+        const requestInfo = {
+            method: 'POST',
+            body:JSON.stringify(data),
+            headers: new Headers({
+                'Content-Type':'application/json'
+            }),
+        };
+        
+        if (!pattern.test(data.email)){
+            this.setState({ message : 'El correo electronicó no es válido.' });  
+            return
+        }
+
+        if (!data.password) {
+            this.setState({ message : 'Debes ingresar tu password.' }); 
+            return
+        }
+
+
+        fetch('https://sandbox.banwire.com/auth/v1/account/login', requestInfo)
+        .then(response =>{
+            if(response.ok){
+                return response.json()
+            }
+            
+            throw new Error("Accessos no válidos.");
+        })
+
+        .then(token => {
+            localStorage.setItem("token-chargebacks-jwt", token.access_token);
+            localStorage.setItem("token-chargebacks-refresh", token.refresh_token);
+            this.props.history.push("/quote/home");
+            return;
+        })
+        .catch(e => {
+            this.setState({ message: e.message });   
+        });
+    }
+
+        
     render() {
         
 
@@ -156,7 +199,7 @@ class Login extends Component {
                         <input type="submit" className="forma submit_log bot_log_temp"  value="ACCEDER" onClick={this.signIn}/>
                         </div>
                         <div className="mar_t_4 mar_b_4">
-                        <input type="submit" className="forma submit_log bot_log_temp"  value="URLTEST" onClick={this.signIn}/>
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="URLTEST" onClick={this.traeCotizaciones}/>
                         </div>
                         <div className="forma">
                             <a className="rec_c forma" href="/chargebacks/account/reset">RECUPERAR CONTRASEÑA</a>
