@@ -86,7 +86,7 @@ const FiltroReportes= () => {
                             </div>
                             <div className="d50 left_">
                                 <div className="d97 right_">
-                                    <input type="submit" className="right_ mar_t_3 bot_value" value="FILTRAR AHORA" />
+                                    <input type="submit" className="right_ mar_t_3 bot_value" value="FILTRAR AHORA" onClick={this.traeCotizaciones} />
                                 </div>
                             </div>
                         </div>
