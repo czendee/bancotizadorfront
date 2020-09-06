@@ -155,6 +155,9 @@ class Login extends Component {
                         <div className="mar_t_4 mar_b_4">
                         <input type="submit" className="forma submit_log bot_log_temp"  value="ACCEDER" onClick={this.signIn}/>
                         </div>
+                        <div className="mar_t_4 mar_b_4">
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="URLTEST" onClick={this.signIn}/>
+                        </div>
                         <div className="forma">
                             <a className="rec_c forma" href="/chargebacks/account/reset">RECUPERAR CONTRASEÑA</a>
                         </div>
