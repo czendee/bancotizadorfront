@@ -20,9 +20,9 @@ const Routes = () => {
                <PublicRoute exact path='/quote/account/change' component ={Cambiar} /> 
                <PublicRoute exact path='/quote/account/validation' component ={Valida} />
                <PublicRoute exact path='/quote/account/send' component ={Enviar} /> 
-               <PrivateRoute exact path='/quote/quotes' component ={History} />
+               <PublicRoute exact path='/quote/quotes' component ={History} />
                <PrivateRoute exact path='/quote/users' component ={Users} />
-               <PrivateRoute exact path='/quote/quote' component ={Quote} />
+               <PublicRoute exact path='/quote/quote' component ={Quote} />
                <PrivateRoute exact path='/quote/quotedetails' component ={QuoteDetails} />
                <PrivateRoute exact path='/quote/usersdetails' component ={UsersDetails} />
                <PrivateRoute exact path='/quote/home' component ={Home} />
