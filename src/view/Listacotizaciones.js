@@ -52,6 +52,42 @@ class Listacotizaciones extends Component {
         });
     }
 
+  
+  traeCotizaciones = () => {
+
+        const data = { numero : "122", name: "primero"};
+        const requestInfo = {
+            method: 'POST',
+            body:JSON.stringify(data),
+            headers: new Headers({
+                'Content-Type':'application/json'
+            }),
+        };
+     
+
+/*
+        if (!pattern.test(data.email)){
+            this.setState({ message : 'El correo electronicó no es válido.' });  
+@@ -27,7 +27,7 @@ const FiltroReportes= () => {
+            return
+        }
+*/
+
+
+        fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizaciones', requestInfo)
+        .then(response =>{
+            if(response.ok){
+                return response.json()
+            }
+            
+            throw new Error("Error cotizacioness.");
+        })
+        .catch(e => {
+            this.setState({ message: e.message });   
+        });
+    }
+
+
         render() {
   return (
     <Fragment>
