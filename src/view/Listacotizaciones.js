@@ -2,6 +2,13 @@
 // Importing Libraries
 import React, { Component, lazy, Suspense,Fragment } from "react";
 import logo from '../assets/img/logo.svg';
+
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+import FiltroReportes from "../components/reportes/Filtro.jsx";
+import TablaReportes from "../components/reportes/Tabla.jsx";
+import Paginador from "../components/Paginador.jsx";
+
 // Component
 var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 class Listacotizaciones extends Component {
@@ -51,6 +58,16 @@ class Listacotizaciones extends Component {
     <div className="App">
     <header className = "App-header">
 
+        <div className="forma slider_tab mar_t_5">
+            <div className="contenedor3 center">
+                <div className="forma">               
+                    <h1 className="forma left_ t_center mar_t_10">
+                        COTIZACIONES
+                    </h1>
+                </div>
+            </div>    
+        </div>
+        <FiltroReportes></FiltroReportes>
 
     <div className="forma login">
         <div className="contenedor3 center">
