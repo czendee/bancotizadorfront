@@ -92,4 +92,4 @@ class listacotizaciones extends Component {
 }
 }
 // Exporting component
-export default Recuperar;
+export default listacotizaciones ;
