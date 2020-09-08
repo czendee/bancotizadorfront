@@ -5,41 +5,6 @@ import calendario from '../../assets/img/cal.jpg';
 const FiltroReportes= () => {
 
    
-   var traeCotizaciones = () => {
-        
-        const data = { numero : "122", name: "primero"};
-        const requestInfo = {
-            method: 'POST',
-            body:JSON.stringify(data),
-            headers: new Headers({
-                'Content-Type':'application/json'
-            }),
-        };
-     
-/*
-        if (!pattern.test(data.email)){
-            this.setState({ message : 'El correo electronicó no es válido.' });  
-            return
-        }
-
-        if (!data.password) {
-            this.setState({ message : 'Debes ingresar tu password.' }); 
-            return
-        }
-*/
-
-        fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizaciones', requestInfo)
-        .then(response =>{
-            if(response.ok){
-                return response.json()
-            }
-            
-            throw new Error("Error cotizacioness.");
-        })
-        .catch(e => {
-            this.setState({ message: e.message });   
-        });
-    }
    
 
   return (
