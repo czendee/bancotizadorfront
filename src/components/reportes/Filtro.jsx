@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import calendario from '../../assets/img/cal.jpg';
 const FiltroReportes= () => {
 
-   /*
+   
    var traeCotizaciones = () => {
         
         const data = { numero : "122", name: "primero"};
@@ -15,7 +15,7 @@ const FiltroReportes= () => {
                 'Content-Type':'application/json'
             }),
         };
-     */   
+     
 /*
         if (!pattern.test(data.email)){
             this.setState({ message : 'El correo electronicó no es válido.' });  
@@ -27,7 +27,7 @@ const FiltroReportes= () => {
             return
         }
 */
-/*
+
         fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizaciones', requestInfo)
         .then(response =>{
             if(response.ok){
@@ -40,7 +40,7 @@ const FiltroReportes= () => {
             this.setState({ message: e.message });   
         });
     }
-  */  
+   
 
   return (
       <Fragment>
@@ -123,7 +123,7 @@ const FiltroReportes= () => {
                             </div>
                             <div className="d50 left_">
                                 <div className="d97 right_">
-                                    <input type="submit" className="right_ mar_t_3 bot_value" value="FILTRAR AHORA carlos"  />
+                                    <input type="submit" className="right_ mar_t_3 bot_value" value="FILTRAR AHORA carlos" onClick={this.traeCotizaciones} />
                                 </div>
                             </div>
                         </div>
