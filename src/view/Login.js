@@ -23,6 +23,7 @@ class Login extends Component {
         let fields = this.state.fields;
         fields[e.target.name] = e.target.value;
         this.setState({fields});
+        //
     }
 
     submituserRegistrationForm(e) {
