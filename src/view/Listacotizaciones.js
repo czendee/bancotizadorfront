@@ -74,7 +74,9 @@ class Listacotizaciones extends Component {
 */
 
 
-        fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizaciones', requestInfo)
+//        fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizaciones', requestInfo)
+        fetch('http://198.101.187.112:3006/banwireapi/cotizaciones', requestInfo)      
+      
         .then(response =>{
             if(response.ok){
                 return response.json()
