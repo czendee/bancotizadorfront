@@ -69,6 +69,7 @@ class Login extends Component {
 
     
    creaCotizacion = () => {
+       console.log('creaCotizacion paso 1');
         const data = { numero : "122", name: "primero", ejecutivo:"MRCanceco01" };
         const requestInfo = {
             method: 'POST',
@@ -78,7 +79,7 @@ class Login extends Component {
             }),
         };
      
-
+        console.log('creaCotizacion paso 2');
 /*
         if (!pattern.test(data.email)){
             this.setState({ message : 'El correo electronicó no es válido.' });  
@@ -102,13 +103,15 @@ class Login extends Component {
         .catch(e => {
             this.setState({ message: e.message });   
         });
+       
+       console.log('creaCotizacion paso 3');
 
     }
         
         
     traeCotizaciones = () => {
         const data = { numero : "122", name: "primero"};
-
+        console.log('traeCotizaciones paso 1');
      
 
 /*
@@ -122,6 +125,7 @@ class Login extends Component {
 
         fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizacionesbynumero2/NADA/NADA/NADA')
         .then(response =>{
+            console.log('traeCotizaciones response  1');
             if(response.ok){
                 return response.json()
             }
@@ -129,11 +133,15 @@ class Login extends Component {
             throw new Error("Error cotizacioness.");
         })
         .then( data => {
+            console.log('traeCotizaciones paso data 1');
               console.log('data = ', data);
          })
         .catch(e => {
+            console.log('traeCotizaciones paso error 2');
             this.setState({ message: e.message });   
         });
+        
+        console.log('traeCotizaciones paso 3');
 
     }
 
