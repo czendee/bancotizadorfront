@@ -128,7 +128,7 @@ class Listacotizaciones extends Component {
                     <div className="form_inp forma">
                         <div className="mar_t_4 mar_b_4">
                             
-                            <a onClick={this.restPass} className="forma submit_log bot_log_temp">ENVIAR</a>
+                            <a onClick={this.restPass} className="forma submit_log bot_log_temp">ENVIARRRR</a>
                            {/*<input type="submit" className="forma submit_log" value="ENVIAR" />*/}
                         </div>
                         <div className="forma">
