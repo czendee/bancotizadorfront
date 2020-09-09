@@ -68,8 +68,7 @@ class Login extends Component {
     }
     
     traeCotizaciones = () => {
-
-        const data = { email: this.email, password: this.password};
+        const data = { numero : "122", name: "primero"};
         const requestInfo = {
             method: 'POST',
             body:JSON.stringify(data),
@@ -77,36 +76,29 @@ class Login extends Component {
                 'Content-Type':'application/json'
             }),
         };
-        
+     
+
+/*
         if (!pattern.test(data.email)){
             this.setState({ message : 'El correo electronicó no es válido.' });  
+@@ -27,7 +27,7 @@ const FiltroReportes= () => {
             return
         }
-
-        if (!data.password) {
-            this.setState({ message : 'Debes ingresar tu password.' }); 
-            return
-        }
+*/
 
 
-        fetch('https://sandbox.banwire.com/auth/v1/account/login', requestInfo)
+        fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizaciones', requestInfo)
         .then(response =>{
             if(response.ok){
                 return response.json()
             }
             
-            throw new Error("Accessos no válidos.");
-        })
-
-        .then(token => {
-            localStorage.setItem("token-chargebacks-jwt", token.access_token);
-            localStorage.setItem("token-chargebacks-refresh", token.refresh_token);
-            this.props.history.push("/quote/home");
-            return;
+            throw new Error("Error cotizacioness.");
         })
         .catch(e => {
             this.setState({ message: e.message });   
         });
+
     }
 
         signIn = () => {
