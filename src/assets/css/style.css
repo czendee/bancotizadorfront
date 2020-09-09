@@ -2254,6 +2254,10 @@ element.style {
 #tabla_cotizador, #tabla_cotizador td, #tabla_cotizador tr {
    border:none;
 }
+#tabla_cotizador td{
+   width:25%;
+   float:left;
+}
 #tabla_cotizador select, #tabla_cotizador input{
    text-align: center;
    width: 100%;

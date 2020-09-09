@@ -35,7 +35,7 @@ const FiltroReportes= () => {
                         <div className="d16 left_">
                             <label className="forma">Giro MCC</label>
                             <select className="select">
-                            <option value="">Seleciona tu opción</option>
+                            <option >Seleciona tu opción</option>
                             <option>Agencias de Viajes</option>
                             <option>Aseguradoras</option>
                             <option>Beneficencia</option>

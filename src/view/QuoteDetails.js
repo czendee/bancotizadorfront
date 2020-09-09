@@ -64,7 +64,7 @@ const UsersDetails = (props) => {
                         <div className="forma mar_b_2">
                             <label className="forma">Giro MCC</label>
                             <select className="select t_left">
-                            <option value="">Seleciona tu opción</option>
+                            <option >Seleciona tu opción</option>
                             <option>Agencias de Viajes</option>
                             <option>Aseguradoras</option>
                             <option>Beneficencia</option>
