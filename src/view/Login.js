@@ -66,9 +66,10 @@ class Login extends Component {
       this.setState({errors: errors});
       return formIsValid;
     }
+
     
-    traeCotizaciones = () => {
-        const data = { numero : "122", name: "primero"};
+   creaCotizacion = () => {
+        const data = { numero : "122", name: "primero", ejecutivo:"MRCanceco01" };
         const requestInfo = {
             method: 'POST',
             body:JSON.stringify(data),
@@ -95,6 +96,41 @@ class Login extends Component {
             
             throw new Error("Error cotizacioness.");
         })
+        .then( data => {
+              console.log('data = ', data);
+         })       
+        .catch(e => {
+            this.setState({ message: e.message });   
+        });
+
+    }
+        
+        
+    traeCotizaciones = () => {
+        const data = { numero : "122", name: "primero"};
+
+     
+
+/*
+        if (!pattern.test(data.email)){
+            this.setState({ message : 'El correo electronicó no es válido.' });  
+@@ -27,7 +27,7 @@ const FiltroReportes= () => {
+            return
+        }
+*/
+
+
+        fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizacionesbynumero2/NADA/NADA/NADA')
+        .then(response =>{
+            if(response.ok){
+                return response.json()
+            }
+            
+            throw new Error("Error cotizacioness.");
+        })
+        .then( data => {
+              console.log('data = ', data);
+         })
         .catch(e => {
             this.setState({ message: e.message });   
         });
@@ -191,7 +227,10 @@ class Login extends Component {
                         <input type="submit" className="forma submit_log bot_log_temp"  value="ACCEDER" onClick={this.signIn}/>
                         </div>
                         <div className="mar_t_4 mar_b_4">
-                        <input type="submit" className="forma submit_log bot_log_temp"  value="URLTEST" onClick={this.traeCotizaciones}/>
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="Lista Cotizaciones" onClick={this.traeCotizaciones}/>
+                        </div>
+                        <div className="mar_t_4 mar_b_4">
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="CREA COTIZACION" onClick={this.creaCotizacion}/>
                         </div>
                         <div className="forma">
                             <a className="rec_c forma" href="/chargebacks/account/reset">RECUPERAR CONTRASEÑA</a>
