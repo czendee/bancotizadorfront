@@ -157,7 +157,7 @@ class Login extends Component {
                         <input type="submit" className="forma submit_log bot_log_temp"  value="ACCEDER" onClick={this.signIn}/>
                         </div>
                         <div className="forma">
-                            <a className="rec_c forma" href="/chargebacks/account/reset">RECUPERAR CONTRASEÑA</a>
+                            <a className="rec_c forma" href="/chargebacks/account/reset">RECUPERAR CCCCONTRASEÑA</a>
                         </div>
                     </div>
                 </form>
