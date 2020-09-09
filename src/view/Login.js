@@ -235,7 +235,7 @@ class Login extends Component {
                         <input type="submit" className="forma submit_log bot_log_temp"  value="ACCEDER" onClick={this.signIn}/>
                         </div>
                         <div className="mar_t_4 mar_b_4">
-                        <input type="submit" className="forma submit_log bot_log_temp"  value="Lista Cotizaciones" onClick={this.traeCotizaciones}/>
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="ListaA Cotizaciones" onClick={this.traeCotizaciones}/>
                         </div>
                         <div className="mar_t_4 mar_b_4">
                         <input type="submit" className="forma submit_log bot_log_temp"  value="CREA COTIZACION" onClick={this.creaCotizacion}/>
