@@ -7,6 +7,7 @@ import Recuperar from './view/Recuperar';
 import Cambiar from './view/Cambiar';
 import Valida from './view/Valida';
 import Enviar from './view/Enviar';
+
 const Routes = () => {
         return (
             <Switch>
