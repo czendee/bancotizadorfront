@@ -964,6 +964,9 @@ h4 {
 }
 .contenido_tabs .tab_repo tr:nth-child(odd){
    background: #fff;
+    width: 100%;
+    float: left;
+    margin: 1px 0 0;
 }
 .o_c_d input, .o_c_d select {
    border:none;
@@ -2373,4 +2376,11 @@ span{
 .terminales select{
       height: 16px!important;
 }
+}
+.download{
+background: url(../img/download.svg) no-repeat center;
+background-size:cover;
+height:300px;  
+ display:block;
+margin: 0 auto;
 }
