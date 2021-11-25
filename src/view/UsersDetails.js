@@ -233,9 +233,9 @@ const UsersDetails = (props) => {
                     <div className="forma inputs_filter mar_t_3">
                     <h2 className="forma t_left">Datos de usuario</h2>
                     <div className="forma mar_t_3 mar_b_2">
-                            <label className="forma">Tipo de Usuario</label>
+                            <label className="forma">Tipo de Perfil</label>
                             <select className="select t_left">
-                            <option value="">Administrador</option>
+                            <option >Administrador</option>
                             <option>Asesor</option>
                             <option>Agente</option>
                             </select>
