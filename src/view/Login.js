@@ -121,7 +121,14 @@ class Login extends Component {
             return
         }
 */
-
+/*
+                        <div className="mar_t_4 mar_b_4">
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="Lista Cotizaciones" onClick={this.traeCotizaciones}/>
+                        </div>
+                        <div className="mar_t_4 mar_b_4">
+                        <input type="submit" className="forma submit_log bot_log_temp"  value="CREA COTIZACION" onClick={this.creaCotizacion}/>
+                        </div>
+*/
 
         fetch('http://peaceful-retreat-91246.herokuapp.com/banwireapi/cotizacionesbynumero2/NADA/NADA/NADA')
         .then(response =>{
@@ -177,8 +184,9 @@ class Login extends Component {
         })
 
         .then(token => {
+            
             localStorage.setItem("token-chargebacks-jwt", token.access_token);
-            localStorage.setItem("token-chargebacks-refresh", token.refresh_token);
+//no refresh in the back             localStorage.setItem("token-chargebacks-refresh", token.refresh_token);
             this.props.history.push("/quote/home");
             return;
         })
@@ -234,15 +242,8 @@ class Login extends Component {
                         <div className="mar_t_4 mar_b_4">
                         <input type="submit" className="forma submit_log bot_log_temp"  value="ACCEDER" onClick={this.signIn}/>
                         </div>
-                        <div className="mar_t_4 mar_b_4">
-                        <input type="submit" className="forma submit_log bot_log_temp"  value="ListaA Cotizaciones" onClick={this.traeCotizaciones}/>
-                        </div>
-                        <div className="mar_t_4 mar_b_4">
-                        <input type="submit" className="forma submit_log bot_log_temp"  value="CREA COTIZACION" onClick={this.creaCotizacion}/>
-                        </div>
-                        <div className="forma">
-                            <a className="rec_c forma" href="/chargebacks/account/reset">RECUPERAR CONTRASEÑA</a>
-                        </div>
+
+
                     </div>
                 </form>
             </div>
