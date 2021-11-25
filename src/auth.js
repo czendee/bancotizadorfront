@@ -3,7 +3,8 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 const isAuth = () => {
-    if (localStorage.getItem('token-chargebacks-jwt') !== null && localStorage.getItem('token-chargebacks-refresh')){
+//    if (localStorage.getItem('token-chargebacks-jwt') !== null && localStorage.getItem('token-chargebacks-refresh')){
+    if (localStorage.getItem('token-chargebacks-jwt') !== null ){        
         return true
     }
     return false;
