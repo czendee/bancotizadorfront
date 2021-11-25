@@ -3,9 +3,7 @@ import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import calendario from '../../assets/img/cal.jpg';
 const FiltroReportes= () => {
-
-   
-   
+    
 
   return (
       <Fragment>
@@ -37,7 +35,7 @@ const FiltroReportes= () => {
                         <div className="d16 left_">
                             <label className="forma">Giro MCC</label>
                             <select className="select">
-                            <option value="">Seleciona tu opción</option>
+                            <option >Seleciona tu opción</option>
                             <option>Agencias de Viajes</option>
                             <option>Aseguradoras</option>
                             <option>Beneficencia</option>
@@ -88,7 +86,7 @@ const FiltroReportes= () => {
                             </div>
                             <div className="d50 left_">
                                 <div className="d97 right_">
-                                    <input type="submit" className="right_ mar_t_3 bot_value" value="FILTRAR AHORA carlos" />
+                                    <input type="submit" className="right_ mar_t_3 bot_value" value="FILTRAR AHORA" />
                                 </div>
                             </div>
                         </div>
