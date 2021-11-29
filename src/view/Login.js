@@ -221,7 +221,7 @@ class Login extends Component {
                             id="email" 
                             onChange={ e => this.email = e.target.value }
                             name="email"
-                            placeholder="example@banwire.com" />
+                            placeholder="example@youtochi.com" />
                     </div>
                     <div className="form_inp forma mar_t_1">
                         <label>Password</label>
